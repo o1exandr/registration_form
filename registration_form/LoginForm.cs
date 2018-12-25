@@ -39,5 +39,10 @@ namespace registration_form
         {
             this.Close();
         }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+        }
     }
 }
