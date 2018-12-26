@@ -24,7 +24,13 @@ namespace registration_form
                 lblUserId.Text = "User id = "
                     + _userId.ToString();
             }
-   
+            /*
+            RegisterForm dlgRegister = new RegisterForm();
+            if (dlgRegister.ShowDialog() == DialogResult.Yes)
+            {
+
+            }
+            */
         }
 
         private void MainForm_Load_1(object sender, EventArgs e)

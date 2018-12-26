@@ -35,15 +35,20 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.btRegister = new System.Windows.Forms.Button();
+            this.btLogin = new System.Windows.Forms.Button();
+            this.btCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // pctLogo
             // 
-            this.pctLogo.Location = new System.Drawing.Point(18, 18);
+            this.pctLogo.Image = global::registration_form.Properties.Resources.logo;
+            this.pctLogo.Location = new System.Drawing.Point(12, 18);
             this.pctLogo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pctLogo.Name = "pctLogo";
-            this.pctLogo.Size = new System.Drawing.Size(103, 91);
+            this.pctLogo.Size = new System.Drawing.Size(83, 92);
+            this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctLogo.TabIndex = 0;
             this.pctLogo.TabStop = false;
             // 
@@ -51,7 +56,7 @@
             // 
             this.lbEmail.AutoSize = true;
             this.lbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbEmail.Location = new System.Drawing.Point(129, 17);
+            this.lbEmail.Location = new System.Drawing.Point(103, 17);
             this.lbEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbEmail.Name = "lbEmail";
             this.lbEmail.Size = new System.Drawing.Size(57, 24);
@@ -62,7 +67,7 @@
             // 
             this.pbPass1.AutoSize = true;
             this.pbPass1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.pbPass1.Location = new System.Drawing.Point(129, 50);
+            this.pbPass1.Location = new System.Drawing.Point(103, 50);
             this.pbPass1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.pbPass1.Name = "pbPass1";
             this.pbPass1.Size = new System.Drawing.Size(92, 24);
@@ -73,7 +78,7 @@
             // 
             this.lbPass2.AutoSize = true;
             this.lbPass2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbPass2.Location = new System.Drawing.Point(129, 84);
+            this.lbPass2.Location = new System.Drawing.Point(103, 84);
             this.lbPass2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbPass2.Name = "lbPass2";
             this.lbPass2.Size = new System.Drawing.Size(161, 24);
@@ -82,30 +87,66 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(300, 17);
+            this.textBox1.Location = new System.Drawing.Point(274, 17);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(354, 26);
             this.textBox1.TabIndex = 3;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(300, 50);
+            this.textBox2.Location = new System.Drawing.Point(274, 50);
             this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(354, 26);
             this.textBox2.TabIndex = 3;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(300, 84);
+            this.textBox3.Location = new System.Drawing.Point(274, 84);
             this.textBox3.Name = "textBox3";
+            this.textBox3.PasswordChar = '*';
             this.textBox3.Size = new System.Drawing.Size(354, 26);
             this.textBox3.TabIndex = 3;
+            // 
+            // btRegister
+            // 
+            this.btRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btRegister.Location = new System.Drawing.Point(51, 149);
+            this.btRegister.Name = "btRegister";
+            this.btRegister.Size = new System.Drawing.Size(157, 36);
+            this.btRegister.TabIndex = 4;
+            this.btRegister.Text = "Registration";
+            this.btRegister.UseVisualStyleBackColor = true;
+            // 
+            // btLogin
+            // 
+            this.btLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btLogin.Location = new System.Drawing.Point(254, 149);
+            this.btLogin.Name = "btLogin";
+            this.btLogin.Size = new System.Drawing.Size(157, 36);
+            this.btLogin.TabIndex = 4;
+            this.btLogin.Text = "Back to Log in";
+            this.btLogin.UseVisualStyleBackColor = true;
+            // 
+            // btCancel
+            // 
+            this.btCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btCancel.Location = new System.Drawing.Point(453, 149);
+            this.btCancel.Name = "btCancel";
+            this.btCancel.Size = new System.Drawing.Size(157, 36);
+            this.btCancel.TabIndex = 4;
+            this.btCancel.Text = "Cancel";
+            this.btCancel.UseVisualStyleBackColor = true;
+            this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
             // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(670, 213);
+            this.ClientSize = new System.Drawing.Size(638, 213);
+            this.Controls.Add(this.btCancel);
+            this.Controls.Add(this.btLogin);
+            this.Controls.Add(this.btRegister);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -119,6 +160,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "RegisterForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration";
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
             this.ResumeLayout(false);
@@ -135,5 +177,8 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button btRegister;
+        private System.Windows.Forms.Button btLogin;
+        private System.Windows.Forms.Button btCancel;
     }
 }

@@ -32,7 +32,7 @@ namespace registration_form
                 return;
             }
 
-            MessageBox.Show($"Не вгадав {strLogin} {strPassword}");
+            MessageBox.Show($"Wrong email '{strLogin}' or password '{strPassword}'");
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -43,6 +43,8 @@ namespace registration_form
         private void btnRegister_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
+            RegisterForm dlgRegister = new RegisterForm();
+            dlgRegister.ShowDialog();
         }
     }
 }
