@@ -21,14 +21,16 @@ namespace registration_form
             if (dlgLogin.ShowDialog() == DialogResult.OK)
             {
                 _userId = dlgLogin.UserId;
-                lblUserId.Text = "User id = "
-                    + _userId.ToString();
+                lblUserId.Text = "Connected! User id = "
+                    + _userId.ToString() 
+                    + "; User Email: " + dlgLogin.UserEmail;
             }
+
             /*
             RegisterForm dlgRegister = new RegisterForm();
-            if (dlgRegister.ShowDialog() == DialogResult.Yes)
+            if (dlgRegister.ShowDialog() == DialogResult.OK)
             {
-
+                lblUserId.Text = "Connected! User " + dlgRegister.userInfo + " added";
             }
             */
         }

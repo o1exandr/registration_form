@@ -32,9 +32,9 @@
             this.lbEmail = new System.Windows.Forms.Label();
             this.pbPass1 = new System.Windows.Forms.Label();
             this.lbPass2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtPass1 = new System.Windows.Forms.TextBox();
+            this.txtPass2 = new System.Windows.Forms.TextBox();
             this.btRegister = new System.Windows.Forms.Button();
             this.btLogin = new System.Windows.Forms.Button();
             this.btCancel = new System.Windows.Forms.Button();
@@ -85,28 +85,28 @@
             this.lbPass2.TabIndex = 2;
             this.lbPass2.Text = "Confirm password";
             // 
-            // textBox1
+            // txtEmail
             // 
-            this.textBox1.Location = new System.Drawing.Point(274, 17);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(354, 26);
-            this.textBox1.TabIndex = 3;
+            this.txtEmail.Location = new System.Drawing.Point(274, 17);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(354, 26);
+            this.txtEmail.TabIndex = 0;
             // 
-            // textBox2
+            // txtPass1
             // 
-            this.textBox2.Location = new System.Drawing.Point(274, 50);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(354, 26);
-            this.textBox2.TabIndex = 3;
+            this.txtPass1.Location = new System.Drawing.Point(274, 50);
+            this.txtPass1.Name = "txtPass1";
+            this.txtPass1.PasswordChar = '*';
+            this.txtPass1.Size = new System.Drawing.Size(354, 26);
+            this.txtPass1.TabIndex = 1;
             // 
-            // textBox3
+            // txtPass2
             // 
-            this.textBox3.Location = new System.Drawing.Point(274, 84);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.PasswordChar = '*';
-            this.textBox3.Size = new System.Drawing.Size(354, 26);
-            this.textBox3.TabIndex = 3;
+            this.txtPass2.Location = new System.Drawing.Point(274, 84);
+            this.txtPass2.Name = "txtPass2";
+            this.txtPass2.PasswordChar = '*';
+            this.txtPass2.Size = new System.Drawing.Size(354, 26);
+            this.txtPass2.TabIndex = 2;
             // 
             // btRegister
             // 
@@ -114,9 +114,10 @@
             this.btRegister.Location = new System.Drawing.Point(51, 149);
             this.btRegister.Name = "btRegister";
             this.btRegister.Size = new System.Drawing.Size(157, 36);
-            this.btRegister.TabIndex = 4;
+            this.btRegister.TabIndex = 3;
             this.btRegister.Text = "Registration";
             this.btRegister.UseVisualStyleBackColor = true;
+            this.btRegister.Click += new System.EventHandler(this.btRegister_Click);
             // 
             // btLogin
             // 
@@ -134,7 +135,7 @@
             this.btCancel.Location = new System.Drawing.Point(453, 149);
             this.btCancel.Name = "btCancel";
             this.btCancel.Size = new System.Drawing.Size(157, 36);
-            this.btCancel.TabIndex = 4;
+            this.btCancel.TabIndex = 5;
             this.btCancel.Text = "Cancel";
             this.btCancel.UseVisualStyleBackColor = true;
             this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
@@ -147,9 +148,9 @@
             this.Controls.Add(this.btCancel);
             this.Controls.Add(this.btLogin);
             this.Controls.Add(this.btRegister);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPass2);
+            this.Controls.Add(this.txtPass1);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lbPass2);
             this.Controls.Add(this.pbPass1);
             this.Controls.Add(this.lbEmail);
@@ -174,9 +175,9 @@
         private System.Windows.Forms.Label lbEmail;
         private System.Windows.Forms.Label pbPass1;
         private System.Windows.Forms.Label lbPass2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtPass1;
+        private System.Windows.Forms.TextBox txtPass2;
         private System.Windows.Forms.Button btRegister;
         private System.Windows.Forms.Button btLogin;
         private System.Windows.Forms.Button btCancel;
