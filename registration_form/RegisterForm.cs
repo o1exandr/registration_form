@@ -32,15 +32,18 @@ namespace registration_form
             string strPass2 = txtPass2.Text;
             if (strPass1 != strPass2) //якщо не ідентичні, то інформуємо
                 MessageBox.Show("Different password. Enter same password");
-            else
+            else // інакше реєстрація
             {
-                Registration(strEmail, strPass1);
-                this.DialogResult = DialogResult.OK;
+                if (Registration(strEmail, strPass1))
+                {
+                    this.DialogResult = DialogResult.OK;
+                    btLogin_Click(sender, e);
+                }
             }
 
         }
 
-        private void Registration(string login, string pass)
+        private bool Registration(string login, string pass)
         {
             string conStr = ConfigurationManager.AppSettings["ConnectionString"];
             SqlConnection con = new SqlConnection(conStr);
@@ -51,14 +54,14 @@ namespace registration_form
             sqlCommand.CommandText = query;
             SqlDataReader reader = sqlCommand.ExecuteReader();
 
-            // перевіряємо чи такий емелй існує в базі
+            // перевіряємо чи такий емейл існує в базі
             while (reader.Read())
             {
                 if (reader["Email"].ToString() == login) // якщо вже існує повідомляємо діалоговим вікном
                 {
                         MessageBox.Show($"Email '{login}' already exists in the database");
                         con.Close();
-                        return;
+                        return false;
                 }
             }
             reader.Close();
@@ -78,6 +81,14 @@ namespace registration_form
             }
 
             con.Close();
+            return true;
+        }
+
+        private void btLogin_Click(object sender, EventArgs e)
+        {
+            Hide();
+            LoginForm dlgLogin = new LoginForm();
+            dlgLogin.ShowDialog();
         }
     }
 }

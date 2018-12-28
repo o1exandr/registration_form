@@ -55,7 +55,6 @@
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(379, 31);
             this.txtLogin.TabIndex = 0;
-            this.txtLogin.Text = "admin@gmail.com";
             // 
             // lbPass
             // 
@@ -75,7 +74,6 @@
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(379, 31);
             this.txtPass.TabIndex = 1;
-            this.txtPass.Text = "123456";
             // 
             // btnLogin
             // 

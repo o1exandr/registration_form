@@ -25,19 +25,11 @@ namespace registration_form
                     + _userId.ToString() 
                     + "; User Email: " + dlgLogin.UserEmail;
             }
-
-            /*
-            RegisterForm dlgRegister = new RegisterForm();
-            if (dlgRegister.ShowDialog() == DialogResult.OK)
-            {
-                lblUserId.Text = "Connected! User " + dlgRegister.userInfo + " added";
-            }
-            */
         }
 
         private void MainForm_Load_1(object sender, EventArgs e)
         {
-            if (_userId == 0)
+            if (_userId != 0)
             {
                 this.Close();
             }

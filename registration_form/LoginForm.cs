@@ -40,6 +40,7 @@ namespace registration_form
         private void btnRegister_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
+            Hide();
             RegisterForm dlgRegister = new RegisterForm();
             dlgRegister.ShowDialog();
         }
